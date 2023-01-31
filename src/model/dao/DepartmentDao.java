@@ -3,7 +3,7 @@ package model.dao;
 import java.util.List;
 
 import model.entities.Department;
-
+// Nessa interface ficam os métodos que irão ser usadas para manipular o DB
 public interface DepartmentDao {
 
 	void insert(Department obj);

@@ -1,7 +1,7 @@
 package model.dao;
 
 import java.util.List;
-
+//Nessa interface ficam os métodos que irão ser usadas para manipular o DB
 import model.entities.Seller;
 
 public interface SellerDao {

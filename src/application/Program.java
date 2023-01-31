@@ -1,10 +1,10 @@
 package application;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -24,7 +24,7 @@ public class Program {
 		Department obj = new Department(1, "Books");
 		
 		Seller seller = new Seller( 21, "Allisson", "ama@jjFla", new Date(), 4000.00, obj); // usando new Date() pega a data do dia
- 		
+ 		SellerDao sellerDao = DaoFactory.createSellerDao(); // aqui chama a interface para intanciar (DaoFactory)
 		System.out.println(seller);
 	}
 
