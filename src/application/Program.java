@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
@@ -14,6 +15,7 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) throws ParseException {
+		Scanner sc = new Scanner(System.in);
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao(); // aqui chama a interface para instanciar (DaoFactory)
 		
@@ -52,8 +54,14 @@ public class Program {
 		
 		
 	
+		System.out.println("\n=== TEST 6: seller DELETE =====");
+		System.out.println("Enter id for delete test ");
+		int id = sc.nextInt();
+		sellerDao.deleteBy(id);
+		System.out.println("Delete completed ");
 	
 	
+		sc.close();
 	}
 		
 }
