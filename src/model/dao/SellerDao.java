@@ -1,6 +1,8 @@
 package model.dao;
 
 import java.util.List;
+
+import model.entities.Department;
 //Nessa interface ficam os métodos que irão ser usadas para manipular o DB
 import model.entities.Seller;
 
@@ -10,5 +12,6 @@ public interface SellerDao {
 	void update(Seller obj);
 	void deleteBy(Integer id);
 	Seller findById(Integer id);
-	List<Seller> dinfALL();
+	List<Seller> findALL();
+	List<Seller> findByDepartment(Department department);
 }
