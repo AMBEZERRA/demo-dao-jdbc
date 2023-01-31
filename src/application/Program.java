@@ -1,6 +1,9 @@
 package application;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -30,6 +33,16 @@ public class Program {
 		for(Seller obj : list) {
 			System.out.println(obj);
 		}
+		
+		
+		LocalDate localDate = LocalDate.parse("2021-05-30");
+		Date date = new SimpleDateFormat("yyyy-MM-dd").parse(localDate.toString());
+		
+		System.out.println("\n=== TEST 4: seller insert =====");
+		Seller newSeller = new Seller(null, "Greg", "greg@gmail", date, 4000.0, department);
+		sellerDao.insert(newSeller);
+		
+		System.out.println("Inserted New id = " + newSeller.getId());
 		
 	}
 
